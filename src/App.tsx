@@ -5,9 +5,9 @@ function App() {
  
 <body>
     <div className="navBar">
-        <img src="./assets/elden logo.png" alt="elden logo" />
+        <img src={require("./assets/elden logo.png")} alt="elden logo" />
         <button className="navButton">
-            <img src=".\assets\elden logo.png" alt="nav compass" />
+            <img src={require("./assets/nav logo.png")} alt="nav compass" />
         </button>
         <button className="navButton">Weapon</button>
         <button className="navButton">Equipment</button>
