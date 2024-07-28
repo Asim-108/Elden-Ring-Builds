@@ -29,5 +29,10 @@ body {
 }
 
 .buildButton{
-
+    background: linear-gradient(180deg, #001401 0%, #00373D 172.33%);
+    /* color: linear-gradient(360deg, #8C8164 -22.78%, #E5E5E5 170.25%); */
+    color: white;
+    padding: 10px;
+    border: 30px;
+    margin: 50px;
 }
