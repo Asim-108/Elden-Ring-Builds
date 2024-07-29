@@ -7,6 +7,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1{
     color: rgb(216, 219, 13);
 }
@@ -29,10 +33,25 @@ body {
 }
 
 .buildButton{
-    background: linear-gradient(180deg, #001401 0%, #00373D 172.33%);
-    /* color: linear-gradient(360deg, #8C8164 -22.78%, #E5E5E5 170.25%); */
+    /* background: linear-gradient(180deg, #001401 0%, #00373D 172.33%); */
     color: white;
     padding: 10px;
     border: 30px;
     margin: 50px;
+}
+
+#box{
+    color: white;
+    background-color: white;
+
+    border-radius: 10px;
+    border: 10px solid;
+    border-color: blue;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+#flex{
+    display: flex;
 }
