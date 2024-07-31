@@ -53,60 +53,77 @@ function App() {
 
       <div id="buildSelect">
         <h1>Choose Build</h1>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("str");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Strength
-        </button>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("dex");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Dexterity
-        </button>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("int");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Intelligence
-        </button>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("fai");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Faith
-        </button>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("arc");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Arcane
-        </button>
-        <button
-          className="buildButton"
-          onClick={function (event) {
-            setStat("rand");
-            setSelectedBuild(undefined);
-          }}
-        >
-          Surprise Me!
-        </button>
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("str");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Strength
+          </button>
+        </a>
+
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("dex");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Dexterity
+          </button>
+        </a>
+
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("int");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Intelligence
+          </button>
+        </a>
+
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("fai");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Faith
+          </button>
+        </a>
+
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("arc");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Arcane
+          </button>
+        </a>
+
+        <a href="#weaponSelect">
+          <button
+            className="buildButton"
+            onClick={function (event) {
+              setStat("rand");
+              setSelectedBuild(undefined);
+            }}
+          >
+            Surprise Me!
+          </button>
+        </a>
       </div>
       <br />
       <br />
@@ -118,9 +135,11 @@ function App() {
             <h1>Choose Weapon</h1>
             {validBuilds?.map((element) => {
               return (
-                <button onClick={() => setSelectedBuild(element)}>
-                  {element?.weapon}
-                </button>
+                <a href="#finalBuild">
+                  <button onClick={() => setSelectedBuild(element)}>
+                    {element?.weapon}
+                  </button>
+                </a>
               );
             })}
           </div>
