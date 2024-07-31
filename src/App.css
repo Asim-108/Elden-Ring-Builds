@@ -5,6 +5,13 @@
   background-color: #001401;
 }
 
+.navButton {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: transparent;
+  border: none;
+}
+
 html {
   scroll-behavior: smooth;
 }

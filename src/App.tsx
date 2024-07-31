@@ -15,14 +15,29 @@ function App() {
   return (
     <body>
       <div className="navBar">
-        <img src={require("./assets/elden logo.png")} alt="elden logo" />
+        <img
+          src={require("./assets/elden logo.png")}
+          alt="elden logo"
+          style={{ marginLeft: 40, marginRight: 40 }}
+        />
+
         <a href="#buildSelect">
           <button className="navButton">
             <img src={require("./assets/nav logo.png")} alt="nav compass" />
           </button>
         </a>
-        <button className="navButton">Weapon</button>
-        <button className="navButton">Equipment</button>
+
+        <a href="#weaponSelect">
+          <button className="navButton">
+            <img src={require("./assets/weapon logo.png")} alt="weapon logo" />
+          </button>
+        </a>
+
+        <a href="#finalBuild">
+          <button className="navButton">
+            <img src={require("./assets/shield logo.png")} alt="shield logo" />
+          </button>
+        </a>
       </div>
 
       <div>
@@ -38,22 +53,58 @@ function App() {
 
       <div id="buildSelect">
         <h1>Choose Build</h1>
-        <button className="buildButton" onClick={() => setStat("str")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("str");
+            setSelectedBuild(undefined);
+          }}
+        >
           Strength
         </button>
-        <button className="buildButton" onClick={() => setStat("dex")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("dex");
+            setSelectedBuild(undefined);
+          }}
+        >
           Dexterity
         </button>
-        <button className="buildButton" onClick={() => setStat("int")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("int");
+            setSelectedBuild(undefined);
+          }}
+        >
           Intelligence
         </button>
-        <button className="buildButton" onClick={() => setStat("fai")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("fai");
+            setSelectedBuild(undefined);
+          }}
+        >
           Faith
         </button>
-        <button className="buildButton" onClick={() => setStat("arc")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("arc");
+            setSelectedBuild(undefined);
+          }}
+        >
           Arcane
         </button>
-        <button className="buildButton" onClick={() => setStat("rand")}>
+        <button
+          className="buildButton"
+          onClick={function (event) {
+            setStat("rand");
+            setSelectedBuild(undefined);
+          }}
+        >
           Surprise Me!
         </button>
       </div>
@@ -63,7 +114,7 @@ function App() {
 
       {stat && (
         <>
-          <div>
+          <div id="weaponSelect">
             <h1>Choose Weapon</h1>
             {validBuilds?.map((element) => {
               return (
@@ -78,7 +129,7 @@ function App() {
 
       {selectedBuild && (
         <>
-          <div>
+          <div id="finalBuild">
             <h1>Your Build</h1>
             <div id="flex">
               <div className="textBox" id="box">
