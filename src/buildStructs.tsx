@@ -238,7 +238,7 @@ let buildsArray = [
   sacredRelicSword,
   godslayersGreatsword,
   riversOfBlood,
-  dragonCommunion
+  dragonCommunion,
 ];
 
 function buildStructs(stat: string | undefined) {
@@ -275,6 +275,7 @@ function buildStructs(stat: string | undefined) {
       break;
     }
   }
+  console.log(validBuilds);
   return validBuilds;
 }
 

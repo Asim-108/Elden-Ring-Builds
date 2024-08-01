@@ -11,19 +11,19 @@ function App() {
     undefined
   );
 
-  let validBuilds = buildStructs(stat);
+  const [validBuilds, setValidBuilds] = useState<undefined | any[]>(undefined);
 
   return (
     <body>
       {/* Navigation bar at the top of the website */}
 
       <div className="navBar">
-        <div style={{width: "75%"}}>
+        <div style={{ width: "75%" }}>
           <img
             className="logo"
             src={require("./assets/elden logo.png")}
             alt="elden logo"
-            style={{ }}
+            style={{}}
           />
         </div>
 
@@ -69,8 +69,9 @@ function App() {
           <button
             className="buildButton"
             onClick={() => {
-              setStat("str");
               setSelectedBuild(undefined);
+              setStat("str");
+              setValidBuilds(buildStructs("str"));
             }}
           >
             Strength
@@ -81,8 +82,9 @@ function App() {
           <button
             className="buildButton"
             onClick={() => {
-              setStat("dex");
               setSelectedBuild(undefined);
+              setStat("dex");
+              setValidBuilds(buildStructs("dex"));
             }}
           >
             Dexterity
@@ -93,8 +95,9 @@ function App() {
           <button
             className="buildButton"
             onClick={() => {
-              setStat("int");
               setSelectedBuild(undefined);
+              setStat("int");
+              setValidBuilds(buildStructs("int"));
             }}
           >
             Intelligence
@@ -105,8 +108,9 @@ function App() {
           <button
             className="buildButton"
             onClick={() => {
-              setStat("fai");
               setSelectedBuild(undefined);
+              setStat("fai");
+              setValidBuilds(buildStructs("fai"));
             }}
           >
             Faith
@@ -117,8 +121,9 @@ function App() {
           <button
             className="buildButton"
             onClick={() => {
-              setStat("arc");
               setSelectedBuild(undefined);
+              setStat("arc");
+              setValidBuilds(buildStructs("arc"));
             }}
           >
             Arcane
@@ -130,8 +135,7 @@ function App() {
             className="buildButton"
             onClick={() => {
               setStat("rand");
-              setSelectedBuild(undefined);
-              validBuilds = buildStructs(stat);
+              setValidBuilds(buildStructs("rand"));
             }}
           >
             Surprise Me!
