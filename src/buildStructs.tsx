@@ -1,5 +1,7 @@
 const gutsSword = {
   weapon: "Guts Greatsword",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/c/c4/ER_Icon_weapon_Greatsword.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -19,6 +21,8 @@ const gutsSword = {
 
 const giantCrusher = {
   weapon: "Giant Crusher",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/9/9b/ER_Icon_weapon_Giant-Crusher.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -38,6 +42,8 @@ const giantCrusher = {
 
 const maraisExecutionersSword = {
   weapon: "Marais Executioner's Sword",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/0/03/ER_Icon_weapon_Marais_Executioner%27s_Sword.png",
   armour: "Briar Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Godfrey Icon",
@@ -57,6 +63,8 @@ const maraisExecutionersSword = {
 
 const darkmoonGreatsword = {
   weapon: "Dark Moon Greatsword",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/8/8c/ER_Icon_weapon_Dark_Moon_Greatsword.png",
   armour: "Spellblade Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Godfrey Icon",
@@ -76,6 +84,8 @@ const darkmoonGreatsword = {
 
 const deathsPoker = {
   weapon: "Deaths Poker",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/a/a6/ER_Icon_weapon_Death%27s_Poker.png",
   armour: "Spellblade Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Graven Mass Talisman",
@@ -95,6 +105,8 @@ const deathsPoker = {
 
 const moonveil = {
   weapon: "Moonveil Katana",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/9/91/ER_Icon_weapon_Moonveil.png",
   armour: "Ronin Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Carian Filigreed Crest",
@@ -114,6 +126,8 @@ const moonveil = {
 
 const handOfMalenia = {
   weapon: "Hand of Malenia",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/2/2a/ER_Icon_weapon_Hand_of_Malenia.png",
   armour: "Malenia'a Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Carian Filigreed Crest",
@@ -133,6 +147,8 @@ const handOfMalenia = {
 
 const uchigatana = {
   weapon: "Uchigatana",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/b/b3/ER_Icon_weapon_Uchigatana.png/",
   armour: "Land of Reeds Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Carian Filigreed Crest",
@@ -152,6 +168,8 @@ const uchigatana = {
 
 const boltOfGransax = {
   weapon: "Bolt of Gransax",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/9/90/ER_Icon_weapon_Bolt_of_Gransax.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -171,6 +189,8 @@ const boltOfGransax = {
 
 const blasphemousBlade = {
   weapon: "Blasphemous Blade",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/8/87/ER_Icon_weapon_Blasphemous_Blade.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -190,6 +210,8 @@ const blasphemousBlade = {
 
 const sacredRelicSword = {
   weapon: "Sacred Relic Sword",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/e/e1/ER_Icon_weapon_Sacred_Relic_Sword.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -209,6 +231,8 @@ const sacredRelicSword = {
 
 const godslayersGreatsword = {
   weapon: "Godslayer's Greatsword",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/0/0a/ER_Icon_weapon_Godslayer%27s_Greatsword.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -228,6 +252,8 @@ const godslayersGreatsword = {
 
 const riversOfBlood = {
   weapon: "Rivers of Blood",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/a/a9/ER_Icon_weapon_Rivers_of_Blood.png",
   armour: "Crucible/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
@@ -247,6 +273,8 @@ const riversOfBlood = {
 
 const dragonCommunion = {
   weapon: "Dragon Communion Seal",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/b/bf/ER_Icon_weapon_Dragon_Communion_Seal.png",
   armour: "White Mask Armour",
   talisman1: "Shard of Alexander",
   talisman2: "Lord of Blood's Exultation",
@@ -266,6 +294,8 @@ const dragonCommunion = {
 
 const mohgwynsSacredSpear = {
   weapon: "Mohgwyn's Sacred Spear",
+  weaponImg:
+    "https://static.wikia.nocookie.net/eldenring/images/1/18/ER_Icon_weapon_Mohgwyn%27s_Sacred_Spear.png",
   armour: "White Mask Armour",
   talisman1: "Shard of Alexander",
   talisman2: "Lord of Blood's Exultation",

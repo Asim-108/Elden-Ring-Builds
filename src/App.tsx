@@ -148,14 +148,20 @@ function App() {
 
       {stat && (
         <>
+          <h1>Choose Weapon</h1>
           <div id="weaponSelect">
-            <h1>Choose Weapon</h1>
             {validBuilds?.map((element) => {
               return (
                 <a href="#finalBuild">
-                  <button onClick={() => setSelectedBuild(element)}>
+                  <div
+                    className="weaponElement"
+                    onClick={() => setSelectedBuild(element)}
+                  >
                     {element?.weapon}
-                  </button>
+                    <button className="weaponButton">
+                      <img src={element.weaponImg} alt="weapon image" />
+                    </button>
+                  </div>
                 </a>
               );
             })}
