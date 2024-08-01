@@ -20,9 +20,8 @@ function App() {
         <div style={{ width: "75%" }}>
           <img
             className="logo"
-            src={require("./assets/elden logo.png")}
+            src={require("./assets/elden-logo.png")}
             alt="elden logo"
-            style={{}}
           />
         </div>
 
@@ -46,17 +45,10 @@ function App() {
       </div>
 
       <div className="eldenBackground">
-        <div style={{ marginTop: "50px" }}>
-          <h1 className="quickBuilds">Quick Builds</h1>
-        </div>
-
-        <h1 className="EldenRing">Elden rinG</h1>
-        <img
-          src="https://i.redd.it/3e2afpjsi4f61.png"
-          alt="Elden Ring Logo"
-          height="250"
-        />
-        <p style={{ color: "white" }}>By: Asim</p>
+        <h1 className="quickBuilds">Quick Builds</h1>
+        <p className="EldenRing">Elden rinG</p>
+        <hr className="line" />
+        <h1 className="author">By: Asim</h1>
       </div>
 
       <br />
