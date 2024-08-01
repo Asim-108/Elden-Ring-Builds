@@ -15,7 +15,6 @@ function App() {
 
   return (
     <body>
-
       {/* Navigation bar at the top of the website */}
       <div className="navBar">
         <div style={{ width: "75%" }}>
@@ -47,10 +46,10 @@ function App() {
       </div>
 
       <div className="eldenBackground">
-        <div style={{marginTop: '50px'}}>
+        <div style={{ marginTop: "50px" }}>
           <h1 className="quickBuilds">Quick Builds</h1>
         </div>
-        
+
         <h1 className="EldenRing">Elden rinG</h1>
         <img
           src="https://i.redd.it/3e2afpjsi4f61.png"
@@ -68,82 +67,85 @@ function App() {
 
       <div id="buildSelect">
         <h1>Choose Build</h1>
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setSelectedBuild(undefined);
-              setStat("str");
-              setValidBuilds(buildStructs("str"));
-            }}
-          >
-            Strength
-          </button>
-        </a>
 
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setSelectedBuild(undefined);
-              setStat("dex");
-              setValidBuilds(buildStructs("dex"));
-            }}
-          >
-            Dexterity
-          </button>
-        </a>
+        <div className="centredBuildButtons">
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setSelectedBuild(undefined);
+                setStat("str");
+                setValidBuilds(buildStructs("str"));
+              }}
+            >
+              Strength
+            </button>
+          </a>
 
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setSelectedBuild(undefined);
-              setStat("int");
-              setValidBuilds(buildStructs("int"));
-            }}
-          >
-            Intelligence
-          </button>
-        </a>
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setSelectedBuild(undefined);
+                setStat("dex");
+                setValidBuilds(buildStructs("dex"));
+              }}
+            >
+              Dexterity
+            </button>
+          </a>
 
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setSelectedBuild(undefined);
-              setStat("fai");
-              setValidBuilds(buildStructs("fai"));
-            }}
-          >
-            Faith
-          </button>
-        </a>
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setSelectedBuild(undefined);
+                setStat("int");
+                setValidBuilds(buildStructs("int"));
+              }}
+            >
+              Intelligence
+            </button>
+          </a>
 
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setSelectedBuild(undefined);
-              setStat("arc");
-              setValidBuilds(buildStructs("arc"));
-            }}
-          >
-            Arcane
-          </button>
-        </a>
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setSelectedBuild(undefined);
+                setStat("fai");
+                setValidBuilds(buildStructs("fai"));
+              }}
+            >
+              Faith
+            </button>
+          </a>
 
-        <a href="#weaponSelect">
-          <button
-            className="buildButton"
-            onClick={() => {
-              setStat("rand");
-              setValidBuilds(buildStructs("rand"));
-            }}
-          >
-            Surprise Me!
-          </button>
-        </a>
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setSelectedBuild(undefined);
+                setStat("arc");
+                setValidBuilds(buildStructs("arc"));
+              }}
+            >
+              Arcane
+            </button>
+          </a>
+
+          <a href="#weaponSelect">
+            <button
+              className="buildButton"
+              onClick={() => {
+                setStat("rand");
+                setValidBuilds(buildStructs("rand"));
+              }}
+            >
+              Surprise Me!
+            </button>
+          </a>
+        </div>
       </div>
 
       <br />
