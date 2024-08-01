@@ -16,6 +16,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navBar {
   background-color: var(--shadow);
   padding: 10px;
@@ -47,10 +51,6 @@
   justify-self: flex-start !important;
   justify-content: flex-start !important;
   justify-items: flex-start !important;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 h1 {
