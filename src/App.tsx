@@ -157,7 +157,7 @@ function App() {
                     className="weaponElement"
                     onClick={() => setSelectedBuild(element)}
                   >
-                    {element?.weapon}
+                    <p id="weaponName">{element?.weapon}</p>
                     <button className="weaponButton">
                       <img src={element.weaponImg} alt="weapon image" />
                     </button>

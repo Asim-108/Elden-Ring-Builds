@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalnia+Glaze:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalnia+Glaze:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Signika:wght@300..700&display=swap");
 
+a {
+  text-decoration: none;
+}
+
 /* Color Definitions */
 :root {
   --shadow: #001401;
@@ -140,6 +144,11 @@ body {
 
 /* Other */
 
+.centredBuildButtons {
+  display: flex;
+  justify-content: center;
+}
+
 .buildButton {
   background: linear-gradient(180deg, #001401 0%, #00373d 172.33%);
   color: var(--highlight);
@@ -150,11 +159,6 @@ body {
   font-family: "Signika";
   font-size: 20px;
   cursor: pointer;
-}
-
-.centredBuildButtons {
-  display: flex;
-  justify-content: center;
 }
 
 #weaponSelect {
@@ -169,9 +173,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(180deg, #001401 0%, #00373D 143.88%);
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
   margin: 20px;
   border-radius: 10px;
+}
+
+#weaponName {
+  font-family: "Signika";
+  color: white;
+  font-size: 20px;
+  margin: 0px;
+  margin-top: 20px;
 }
 
 .weaponButton {
