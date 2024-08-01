@@ -7,6 +7,7 @@
   --primary: #006663;
   --secondary: #00373d;
 
+  --highlight: #e5e5e5;
   --light: #999999;
   --med: #8c8164;
 
@@ -30,6 +31,28 @@ html {
 body {
   background-color: var(--primary);
 }
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--shadow);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
 
 /* Navigation Bar */
 
@@ -120,13 +143,14 @@ body {
 
 .buildButton {
   background: linear-gradient(180deg, #001401 0%, #00373d 172.33%);
-  color: white;
+  color: var(--highlight);
   padding: 40px;
   border: 1px;
   border-radius: 10px;
   margin: 50px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Signika";
   font-size: 20px;
+  cursor: pointer;
 }
 
 .centredBuildButtons {
