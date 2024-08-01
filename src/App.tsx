@@ -15,8 +15,8 @@ function App() {
 
   return (
     <body>
-      {/* Navigation bar at the top of the website */}
 
+      {/* Navigation bar at the top of the website */}
       <div className="navBar">
         <div style={{width: "75%"}}>
           <img
@@ -46,9 +46,12 @@ function App() {
         </a>
       </div>
 
-      <div>
-        <h2 className="quickBuilds">Quick Builds</h2>
-        <h1 className="EldenRing">ELDEN RING</h1>
+      <div className="eldenBackground">
+        <div style={{marginTop: '50px'}}>
+          <h1 className="quickBuilds">Quick Builds</h1>
+        </div>
+        
+        <h1 className="EldenRing">Elden rinG</h1>
         <img
           src="https://i.redd.it/3e2afpjsi4f61.png"
           alt="Elden Ring Logo"

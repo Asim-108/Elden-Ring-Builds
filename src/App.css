@@ -12,7 +12,13 @@
 
   --graddark: linear-gradient(180deg, #001401 0%, #00373d 172.33%);
   --gradmed: linear-gradient(180deg, #8C8164 0%, #E5E5E5 172.33%);
-  --gradlight: linear-gradient(180deg, #FFFFFF 0%, #999999 172.33%);
+  --gradlight: linear-gradient(180deg, #FFFFFF 0%, #999999 90%);
+}
+
+/* Font Definitions */
+@font-face {
+  font-family: Mantinia;
+  src: url("assets/Mantinia.otf") format("opentype");
 }
 
 
@@ -48,30 +54,44 @@ html {
   width: 75px;
   height: 75px;
   margin: 5px;
-  justify-self: flex-start !important;
-  justify-content: flex-start !important;
-  justify-items: flex-start !important;
 }
 
 h1 {
   color: rgb(216, 219, 13);
 }
 
+.eldenBackground {
+  align-content: end;
+  background-image: url('assets/Elden-Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .quickBuilds {
-  color: white !important;
   font-size: 50px;
   font-family: "Signika";
   text-align: center;
+
+  background: var(--gradmed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .EldenRing {
-  font-size: 75px;
+  font-size: 200px;
+  font-family: Mantinia;
   text-align: center;
+
+  background: var(--gradlight);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
-  background-image: url("https://images8.alphacoders.com/118/1186452.jpg");
-  background-size: contain;
+  background-color: var(--primary);
 }
 
 .buildButton {
