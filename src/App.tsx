@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import "./buildStructs";
 import buildStructs from "./buildStructs";
+import * as Icons from "./assets/index";
 
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
@@ -17,27 +18,30 @@ function App() {
       {/* Navigation bar at the top of the website */}
 
       <div className="navBar">
-        <img
-          src={require("./assets/elden logo.png")}
-          alt="elden logo"
-          style={{ marginLeft: 40, marginRight: 40 }}
-        />
+        <div style={{width: "75%"}}>
+          <img
+            className="logo"
+            src={require("./assets/elden logo.png")}
+            alt="elden logo"
+            style={{ }}
+          />
+        </div>
 
         <a href="#buildSelect">
           <button className="navButton">
-            <img src={require("./assets/nav logo.png")} alt="nav compass" />
+            <Icons.CompassIcon />
           </button>
         </a>
 
         <a href="#weaponSelect">
           <button className="navButton">
-            <img src={require("./assets/weapon logo.png")} alt="weapon logo" />
+            <Icons.WeaponIcon />
           </button>
         </a>
 
         <a href="#finalBuild">
           <button className="navButton">
-            <img src={require("./assets/shield logo.png")} alt="shield logo" />
+            <Icons.ShieldIcon />
           </button>
         </a>
       </div>
