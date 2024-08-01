@@ -15,13 +15,11 @@
   --gradlight: linear-gradient(180deg, #ffffff 0%, #999999 90%);
 }
 
-
 /* Font Definitions */
 @font-face {
   font-family: Mantinia;
   src: url("assets/Mantinia.otf") format("opentype");
 }
-
 
 /* General Styles */
 
@@ -32,7 +30,6 @@ html {
 body {
   background-color: var(--primary);
 }
-
 
 /* Navigation Bar */
 
@@ -59,7 +56,6 @@ body {
 .navButton:hover {
   color: var(--primary);
 }
-
 
 /* Title Screen */
 
@@ -120,7 +116,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-
 /* Other */
 
 .buildButton {
@@ -135,11 +130,8 @@ body {
 }
 
 .centredBuildButtons {
-  justify-items: center;
+  display: flex;
   justify-content: center;
-  justify-self: center;
-  align-items: center
-  ;
 }
 
 #box {
