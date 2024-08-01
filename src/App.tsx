@@ -6,14 +6,16 @@ import buildStructs from "./buildStructs";
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
 
-  let validBuilds = buildStructs(stat);
-
   const [selectedBuild, setSelectedBuild] = useState<undefined | any>(
     undefined
   );
 
+  let validBuilds = buildStructs(stat);
+
   return (
     <body>
+      {/* Navigation bar at the top of the website */}
+
       <div className="navBar">
         <img
           src={require("./assets/elden logo.png")}
@@ -48,15 +50,21 @@ function App() {
           alt="Elden Ring Logo"
           height="250"
         />
-        <p>By: Asim</p>
+        <p style={{ color: "white" }}>By: Asim</p>
       </div>
+
+      <br />
+      <br />
+      <br />
+
+      {/* Choosing build Stat */}
 
       <div id="buildSelect">
         <h1>Choose Build</h1>
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("str");
               setSelectedBuild(undefined);
             }}
@@ -68,7 +76,7 @@ function App() {
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("dex");
               setSelectedBuild(undefined);
             }}
@@ -80,7 +88,7 @@ function App() {
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("int");
               setSelectedBuild(undefined);
             }}
@@ -92,7 +100,7 @@ function App() {
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("fai");
               setSelectedBuild(undefined);
             }}
@@ -104,7 +112,7 @@ function App() {
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("arc");
               setSelectedBuild(undefined);
             }}
@@ -116,7 +124,7 @@ function App() {
         <a href="#weaponSelect">
           <button
             className="buildButton"
-            onClick={function (event) {
+            onClick={() => {
               setStat("rand");
               setSelectedBuild(undefined);
             }}
@@ -125,9 +133,12 @@ function App() {
           </button>
         </a>
       </div>
+
       <br />
       <br />
       <br />
+
+      {/* display the valid builds for the stat chosen */}
 
       {stat && (
         <>
@@ -145,6 +156,12 @@ function App() {
           </div>
         </>
       )}
+
+      <br />
+      <br />
+      <br />
+
+      {/* display the final build for user */}
 
       {selectedBuild && (
         <>

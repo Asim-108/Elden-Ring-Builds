@@ -226,6 +226,21 @@ const dragonCommunion = {
   arcane: 50,
 };
 
+let buildsArray = [
+  gutsSword,
+  darkmoonGreatsword,
+  deathsPoker,
+  moonveil,
+  handOfMalenia,
+  uchigatana,
+  boltOfGransax,
+  blasphemousBlade,
+  sacredRelicSword,
+  godslayersGreatsword,
+  riversOfBlood,
+  dragonCommunion
+];
+
 function buildStructs(stat: string | undefined) {
   let validBuilds;
   switch (stat) {
@@ -247,6 +262,12 @@ function buildStructs(stat: string | undefined) {
     }
     case "arc": {
       validBuilds = [riversOfBlood, dragonCommunion];
+      break;
+    }
+    case "rand": {
+      buildsArray.sort(() => Math.random() - 0.5);
+      validBuilds = [buildsArray[0], buildsArray[1], buildsArray[2]];
+      console.log(validBuilds);
       break;
     }
     default: {
