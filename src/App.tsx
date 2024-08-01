@@ -131,6 +131,7 @@ function App() {
             onClick={() => {
               setStat("rand");
               setSelectedBuild(undefined);
+              validBuilds = buildStructs(stat);
             }}
           >
             Surprise Me!
