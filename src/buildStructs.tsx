@@ -17,6 +17,44 @@ const gutsSword = {
   arcane: 50,
 };
 
+const giantCrusher = {
+  weapon: "Giant Crusher",
+  armour: "Crucible/Bullgoat Armour Set",
+  talisman1: "Shard of Alexander",
+  talisman2: "Bullgoat Talisman",
+  talisman3: "Dragoncrest Greatshield",
+  talisman4: "Ritual Sword Talisman",
+  physick1: "Magic-shrouding Cracked Tear",
+  physick2: "Greenburst Crystal Tear",
+  vigor: 50,
+  mind: 50,
+  endurance: 50,
+  strength: 50,
+  dexterity: 50,
+  intelligence: 50,
+  faith: 50,
+  arcane: 50,
+};
+
+const maraisExecutionersSword = {
+  weapon: "Marais Executioner's Sword",
+  armour: "Briar Armour Set",
+  talisman1: "Shard of Alexander",
+  talisman2: "Godfrey Icon",
+  talisman3: "Dragoncrest Greatshield",
+  talisman4: "Rotten Winged Sword Insignia",
+  physick1: "Magic-shrouding Cracked Tear",
+  physick2: "Greenburst Crystal Tear",
+  vigor: 50,
+  mind: 50,
+  endurance: 50,
+  strength: 50,
+  dexterity: 50,
+  intelligence: 50,
+  faith: 50,
+  arcane: 50,
+};
+
 const darkmoonGreatsword = {
   weapon: "Dark Moon Greatsword",
   armour: "Spellblade Armour Set",
@@ -209,9 +247,9 @@ const riversOfBlood = {
 
 const dragonCommunion = {
   weapon: "Dragon Communion Seal",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "White Mask Armour",
   talisman1: "Shard of Alexander",
-  talisman2: "Bullgoat Talisman",
+  talisman2: "Lord of Blood's Exultation",
   talisman3: "Dragoncrest Greatshield",
   talisman4: "Ritual Sword Talisman",
   physick1: "Magic-shrouding Cracked Tear",
@@ -226,8 +264,29 @@ const dragonCommunion = {
   arcane: 50,
 };
 
+const mohgwynsSacredSpear = {
+  weapon: "Mohgwyn's Sacred Spear",
+  armour: "White Mask Armour",
+  talisman1: "Shard of Alexander",
+  talisman2: "Lord of Blood's Exultation",
+  talisman3: "Dragoncrest Greatshield",
+  talisman4: "Carian Filigreed Crest",
+  physick1: "Magic-shrouding Cracked Tear",
+  physick2: "Greenburst Crystal Tear",
+  vigor: 50,
+  mind: 50,
+  endurance: 50,
+  strength: 50,
+  dexterity: 50,
+  intelligence: 50,
+  faith: 50,
+  arcane: 50,
+};
+
 let buildsArray = [
   gutsSword,
+  giantCrusher,
+  maraisExecutionersSword,
   darkmoonGreatsword,
   deathsPoker,
   moonveil,
@@ -239,6 +298,7 @@ let buildsArray = [
   godslayersGreatsword,
   riversOfBlood,
   dragonCommunion,
+  mohgwynsSacredSpear,
 ];
 
 function buildStructs(stat: string | undefined) {
@@ -249,7 +309,7 @@ function buildStructs(stat: string | undefined) {
       break;
     }
     case "str": {
-      validBuilds = [gutsSword];
+      validBuilds = [gutsSword, giantCrusher, maraisExecutionersSword];
       break;
     }
     case "dex": {
@@ -261,7 +321,7 @@ function buildStructs(stat: string | undefined) {
       break;
     }
     case "arc": {
-      validBuilds = [riversOfBlood, dragonCommunion];
+      validBuilds = [riversOfBlood, dragonCommunion, mohgwynsSacredSpear];
       break;
     }
     case "rand": {
