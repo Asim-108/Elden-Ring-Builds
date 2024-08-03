@@ -1,8 +1,21 @@
 import { useState } from "react";
 import "./App.css";
-import "./buildStructs";
 import buildStructs from "./buildStructs";
+import getArmour from "./armourSets";
 import * as Icons from "./assets/index";
+import React from "react";
+
+const importAll = (r: __WebpackModuleApi.RequireContext) => {
+  let images: { [key: string]: string } = {};
+  r.keys().forEach((item: string) => {
+    images[item.replace("./", "")] = r(item).default;
+  });
+  return images;
+};
+
+const images = importAll(
+  require.context("./dynamicAssets", false, /\.(png|jpe?g|svg)$/)
+);
 
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
@@ -12,6 +25,8 @@ function App() {
   );
 
   const [validBuilds, setValidBuilds] = useState<undefined | any[]>(undefined);
+
+  const [armourArray, setArmourArray] = useState<any[]>([]);
 
   return (
     <body>
@@ -155,7 +170,10 @@ function App() {
                 <a href="#finalBuild">
                   <div
                     className="weaponElement"
-                    onClick={() => setSelectedBuild(element)}
+                    onClick={() => {
+                      setSelectedBuild(element);
+                      setArmourArray(getArmour(element.armour));
+                    }}
                   >
                     <p id="weaponName">{element?.weapon}</p>
                     <button className="weaponButton">
@@ -185,6 +203,7 @@ function App() {
               </div>
               <div className="textBox" id="box">
                 {selectedBuild.armour}
+                <img src={armourArray[0]} alt="Armour" />
               </div>
               <div className="textBox" id="box">
                 {selectedBuild.talisman1}

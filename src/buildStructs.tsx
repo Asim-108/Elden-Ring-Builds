@@ -2,7 +2,7 @@ const gutsSword = {
   weapon: "Guts Greatsword",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/c/c4/ER_Icon_weapon_Greatsword.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Crucible Axe/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -128,7 +128,7 @@ const handOfMalenia = {
   weapon: "Hand of Malenia",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/2/2a/ER_Icon_weapon_Hand_of_Malenia.png",
-  armour: "Malenia'a Armour Set",
+  armour: "Malenia's Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Carian Filigreed Crest",
   talisman3: "Dragoncrest Greatshield",
@@ -170,7 +170,7 @@ const boltOfGransax = {
   weapon: "Bolt of Gransax",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/9/90/ER_Icon_weapon_Bolt_of_Gransax.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Tree Sentinel Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -191,7 +191,7 @@ const blasphemousBlade = {
   weapon: "Blasphemous Blade",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/8/87/ER_Icon_weapon_Blasphemous_Blade.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Briar Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -212,7 +212,7 @@ const sacredRelicSword = {
   weapon: "Sacred Relic Sword",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/e/e1/ER_Icon_weapon_Sacred_Relic_Sword.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Blackflame Monk Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -233,7 +233,7 @@ const godslayersGreatsword = {
   weapon: "Godslayer's Greatsword",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/0/0a/ER_Icon_weapon_Godslayer%27s_Greatsword.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Godskin Noble Hood/Leda's Armour",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -254,7 +254,7 @@ const riversOfBlood = {
   weapon: "Rivers of Blood",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/a/a9/ER_Icon_weapon_Rivers_of_Blood.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "White Mask/Black Knife Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bullgoat Talisman",
   talisman3: "Dragoncrest Greatshield",
@@ -275,7 +275,7 @@ const dragonCommunion = {
   weapon: "Dragon Communion Seal",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/b/bf/ER_Icon_weapon_Dragon_Communion_Seal.png",
-  armour: "White Mask Armour",
+  armour: "Drake Knight Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Lord of Blood's Exultation",
   talisman3: "Dragoncrest Greatshield",
@@ -296,7 +296,7 @@ const mohgwynsSacredSpear = {
   weapon: "Mohgwyn's Sacred Spear",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/1/18/ER_Icon_weapon_Mohgwyn%27s_Sacred_Spear.png",
-  armour: "White Mask Armour",
+  armour: "White Mask/Lord of Blood's Set",
   talisman1: "Shard of Alexander",
   talisman2: "Lord of Blood's Exultation",
   talisman3: "Dragoncrest Greatshield",
@@ -331,7 +331,7 @@ let buildsArray = [
   mohgwynsSacredSpear,
 ];
 
-function buildStructs(stat: string | undefined) {
+export default function buildStructs(stat: string | undefined) {
   let validBuilds;
   switch (stat) {
     case "int": {
@@ -357,7 +357,6 @@ function buildStructs(stat: string | undefined) {
     case "rand": {
       buildsArray.sort(() => Math.random() - 0.5);
       validBuilds = [buildsArray[0], buildsArray[1], buildsArray[2]];
-      console.log(validBuilds);
       break;
     }
     default: {
@@ -365,8 +364,5 @@ function buildStructs(stat: string | undefined) {
       break;
     }
   }
-  console.log(validBuilds);
   return validBuilds;
 }
-
-export default buildStructs;
