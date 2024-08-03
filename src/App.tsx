@@ -5,18 +5,6 @@ import getArmour from "./armourSets";
 import * as Icons from "./assets/index";
 import React from "react";
 
-const importAll = (r: __WebpackModuleApi.RequireContext) => {
-  let images: { [key: string]: string } = {};
-  r.keys().forEach((item: string) => {
-    images[item.replace("./", "")] = r(item).default;
-  });
-  return images;
-};
-
-const images = importAll(
-  require.context("./dynamicAssets", false, /\.(png|jpe?g|svg)$/)
-);
-
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
 
