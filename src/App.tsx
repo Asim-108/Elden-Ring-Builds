@@ -4,6 +4,7 @@ import buildStructs from "./buildStructs";
 import getArmour from "./armourSets";
 import * as Icons from "./assets/index";
 import React from "react";
+import { getImageURL } from "./talismanAssets/image-util";
 
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
@@ -195,6 +196,11 @@ function App() {
               </div>
               <div className="textBox" id="box">
                 {selectedBuild.talisman1}
+                <img
+                  src={getImageURL(selectedBuild.talisman1 + ".png")}
+                  alt="talisman slot 1"
+                />
+                {console.log(getImageURL(selectedBuild.talisman1 + ".png"))}
               </div>
             </div>
           </div>
