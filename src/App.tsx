@@ -5,6 +5,7 @@ import getArmour from "./armourSets";
 import * as Icons from "./assets/index";
 import React from "react";
 import { getImageURL } from "./talismanAssets/image-util";
+import getTalisman from "./talismans";
 
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
@@ -16,6 +17,8 @@ function App() {
   const [validBuilds, setValidBuilds] = useState<undefined | any[]>(undefined);
 
   const [armourArray, setArmourArray] = useState<any[]>([]);
+
+  const [talismanArray, setTalismanArray] = useState<any[]>([]);
 
   return (
     <body>
@@ -162,11 +165,13 @@ function App() {
                     onClick={() => {
                       setSelectedBuild(element);
                       setArmourArray(getArmour(element.armour));
+                      setTalismanArray([getTalisman(element.talisman1), getTalisman(element.talisman2),
+                        getTalisman(element.talisman3), getTalisman(element.talisman4)]);
                     }}
                   >
                     <p id="weaponName">{element?.weapon}</p>
                     <button className="weaponButton">
-                      <img src={element.weaponImg} alt="weapon image" />
+                      <img src={element.weaponImg} alt="weapon" />
                     </button>
                   </div>
                 </a>
@@ -193,14 +198,12 @@ function App() {
               <div className="textBox" id="box">
                 {selectedBuild.armour}
                 <img src={armourArray[0]} alt="Armour" />
+                {/* <img src={getArmour(selectedBuild.armour)[1]} alt="Chest Armour" /> */}
               </div>
               <div className="textBox" id="box">
                 {selectedBuild.talisman1}
-                <img
-                  src={getImageURL(selectedBuild.talisman1 + ".png")}
-                  alt="talisman slot 1"
-                />
-                {console.log(getImageURL(selectedBuild.talisman1 + ".png"))}
+                <img src={talismanArray[0]} alt="Talisman 1" />
+                {/* {console.log(getImageURL(selectedBuild.talisman1 + ".png"))} */}
               </div>
             </div>
           </div>
