@@ -23,7 +23,7 @@ const giantCrusher = {
   weapon: "Giant Crusher",
   weaponImg:
     "https://static.wikia.nocookie.net/eldenring/images/9/9b/ER_Icon_weapon_Giant-Crusher.png",
-  armour: "Crucible/Bullgoat Armour Set",
+  armour: "Crucible Axe/Bullgoat Armour Set",
   talisman1: "Shard of Alexander",
   talisman2: "Bull-Goat's Talisman",
   talisman3: "Dragoncrest Greatshield Talisman",

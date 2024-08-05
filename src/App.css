@@ -196,10 +196,122 @@ body {
   background-color: transparent;
 }
 
-#flex {
+#finalBuild {
+  background: #00373d;
+}
+
+#finalSwordAndArmourGroup {
   display: flex;
 }
 
+#finalWeaponBox {
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
+  margin: 10px;
+  padding: 50px;
+  border-radius: 5px;
+  color: white;
+
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Signika";
+  font-size: larger;
+}
+
+#finalWeaponImage {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#finalArmourBox {
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
+  padding: 50px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Signika";
+  font-size: larger;
+
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.finalArmourImage {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+#finalTalismanGroup {
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.finalTalismanBox {
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
+  padding: 50px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Signika";
+  font-size: larger;
+  margin: 20px;
+}
+
+.finalTalismanImage {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+#finalPhysickAndStatsGroup {
+  display: flex;
+}
+
+#finalPhysickGroup {
+  display: flex;
+  background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
+  border-radius: 5px;
+}
+
+#finalPhysickBox {
+  padding: 50px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Signika";
+  font-size: larger;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.finalPhysickImage {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* old code for reference */
 #box {
   color: black;
   background-color: white;
@@ -211,6 +323,6 @@ body {
   margin: 10px;
   margin-left: 50px;
   margin-right: 50px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
