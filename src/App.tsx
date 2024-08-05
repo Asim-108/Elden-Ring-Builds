@@ -6,6 +6,7 @@ import * as Icons from "./assets/index";
 import React from "react";
 import { getImageURL } from "./talismanAssets/image-util";
 import getTalisman from "./talismans";
+import getTear from "./tears";
 
 function App() {
   const [stat, setStat] = useState<undefined | string>(undefined);
@@ -19,6 +20,8 @@ function App() {
   const [armourArray, setArmourArray] = useState<any[]>([]);
 
   const [talismanArray, setTalismanArray] = useState<any[]>([]);
+
+  const [tearArray, setTearArray] = useState<any[]>([]);
 
   return (
     <body>
@@ -167,6 +170,7 @@ function App() {
                       setArmourArray(getArmour(element.armour));
                       setTalismanArray([getTalisman(element.talisman1), getTalisman(element.talisman2),
                         getTalisman(element.talisman3), getTalisman(element.talisman4)]);
+                      setTearArray([getTear(element.tear1), getTear(element.tear2)]);
                     }}
                   >
                     <p id="weaponName">{element?.weapon}</p>
