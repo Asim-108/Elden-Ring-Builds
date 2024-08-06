@@ -35,19 +35,19 @@ function App() {
           />
         </div>
 
-        <a href="#buildSelect">
-          <button className="navButton">
+        <a href="#buildSelect" className="buttonMargins">
+          <button className="compassButton">
             <Icons.CompassIcon />
           </button>
         </a>
 
-        <a href="#weaponSelect">
+        <a href="#weaponSelect" className="buttonMargins">
           <button className="navButton">
             <Icons.WeaponIcon />
           </button>
         </a>
 
-        <a href="#finalBuild">
+        <a href="#finalBuild" className="buttonMargins">
           <button className="navButton">
             <Icons.ShieldIcon />
           </button>
@@ -67,11 +67,19 @@ function App() {
 
       {/* Choosing build Stat */}
 
-      <div id="buildSelect">
-        <h1>Choose Build</h1>
+      <div id="buildSelect" className="section">
+        <div style={{display: 'flex'}}>
+          <div className="sectionIcon">
+            <Icons.CompassIcon />
+          </div>
+          
+          <h1 className="sectionTitle">Choose Build</h1>
+        </div>
+
+        <hr className="line" style={{margin: '25px'}} />
 
         <div className="centredBuildButtons">
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -84,7 +92,7 @@ function App() {
             </button>
           </a>
 
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -97,7 +105,7 @@ function App() {
             </button>
           </a>
 
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -110,7 +118,7 @@ function App() {
             </button>
           </a>
 
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -123,7 +131,7 @@ function App() {
             </button>
           </a>
 
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -136,7 +144,7 @@ function App() {
             </button>
           </a>
 
-          <a href="#weaponSelect">
+          <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
               onClick={() => {
@@ -157,14 +165,20 @@ function App() {
       {/* display the valid builds for the stat chosen */}
 
       {stat && (
-        <>
-          <h1>Choose Weapon</h1>
-          <div id="weaponSelect">
+        <div id="weaponSelect" className="section oddSection">
+          <div style={{display: 'flex'}}>
+            <div className="sectionIcon">
+              <Icons.CompassIcon />
+            </div>
+            <h1 className="sectionTitle">Choose Weapon</h1>
+          </div>
+          <hr className="line" style={{margin: '25px'}} />
+          <div className="weapons">
             {validBuilds?.map((element) => {
               return (
-                <a href="#finalBuild">
+                <a href="#finalBuild" className="buttonMargins clickable">
                   <div
-                    className="weaponElement"
+                    className="weaponElement clickable"
                     onClick={() => {
                       setSelectedBuild(element);
                       setArmourArray(getArmour(element.armour));
@@ -182,14 +196,14 @@ function App() {
                   >
                     <p id="weaponName">{element?.weapon}</p>
                     <button className="weaponButton">
-                      <img src={element.weaponImg} alt="weapon" />
+                      <img src={element.weaponImg} alt="weapon" className="clickable"/>
                     </button>
                   </div>
                 </a>
               );
             })}
           </div>
-        </>
+        </div>
       )}
 
       <br />
@@ -200,8 +214,14 @@ function App() {
 
       {selectedBuild && (
         <>
-          <div id="finalBuild">
-            <h1>Your Build</h1>
+          <div id="finalBuild" className="section">
+            <div style={{display: 'flex'}}>
+              <div className="sectionIcon">
+                <Icons.CompassIcon />
+              </div>
+              <h1 className="sectionTitle">Your Build</h1>
+            </div>
+            <hr className="line" style={{margin: '25px'}} />
             <div id="finalSwordAndArmourGroup">
               <div className="equipmentBox" id="finalWeaponBox">
                 {selectedBuild.weapon}
