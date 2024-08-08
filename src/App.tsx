@@ -118,6 +118,9 @@ function App() {
             </button>
           </a>
 
+        </div>
+        <div className="centredBuildButtons">
+
           <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
@@ -144,6 +147,9 @@ function App() {
             </button>
           </a>
 
+        </div>
+        <div className="centredBuildButtons">
+
           <a href="#weaponSelect" className="buttonMargins">
             <button
               className="buildButton"
@@ -168,7 +174,7 @@ function App() {
         <div id="weaponSelect" className="section oddSection">
           <div style={{display: 'flex'}}>
             <div className="sectionIcon">
-              <Icons.CompassIcon />
+              <Icons.WeaponIcon />
             </div>
             <h1 className="sectionTitle">Choose Weapon</h1>
           </div>
@@ -217,7 +223,7 @@ function App() {
           <div id="finalBuild" className="section">
             <div style={{display: 'flex'}}>
               <div className="sectionIcon">
-                <Icons.CompassIcon />
+                <Icons.ShieldIcon />
               </div>
               <h1 className="sectionTitle">Your Build</h1>
             </div>
