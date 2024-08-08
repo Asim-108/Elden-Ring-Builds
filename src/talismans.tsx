@@ -37,13 +37,13 @@ export default function getTalisman(talisman: string | undefined) {
       return magicScorpionCharm;
     case "Ritual Sword Talisman":
       return ritualSwordTalisman;
-    case "Rotten Winged Insignia":
+    case "Rotten Winged Sword Insignia":
       return rottenWingedSwordInsignia;
     case "Shard of Alexander":
       return shardOfAlexander;
     case "Radagons Sorceal":
       return radagonsSorceal;
-    case "Erdtrees Favour +2":
+    case "Erdtree's Favour +2":
       return erdtreesFavour;
     case "Flock's Canvas Talisman":
       return flocksCanvasTalisman;
