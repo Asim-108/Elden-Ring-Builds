@@ -229,31 +229,31 @@ function App() {
             </div>
             <hr className="line" style={{margin: '25px'}} />
             <div id="finalSwordAndArmourGroup">
-              <div className="equipmentBox" id="finalWeaponBox">
+              <div className="equipmentBox equipmentSeparator" id="finalWeaponBox">
                 {selectedBuild.weapon}
                 <img
                   src={selectedBuild.weaponImg}
                   alt="Weapon of Chosen Class"
-                  id="finalWeaponImage"
+                  className="equipmentImage"
                 />
               </div>
-              <div className="equipmentBox" id="finalArmourBox">
+              <div className="equipmentBox equipmentSeparator" id="finalArmourBox">
                 {selectedBuild.armour}
                 <div>
                   <img
                     src={armourArray[0]}
                     alt="Armour Headgear"
-                    className="finalArmourImage"
+                    className="equipmentImage"
                   />
                   <img
                     src={armourArray[1]}
                     alt="Armour Chest"
-                    className="finalArmourImage"
+                    className="equipmentImage"
                   />
                   <img
                     src={armourArray[2]}
                     alt="Armour Legs"
-                    className="finalArmourImage"
+                    className="equipmentImage"
                   />
                 </div>
               </div>
@@ -261,37 +261,37 @@ function App() {
 
             <br />
 
-            <div id="finalTalismanGroup">
-              <div className="equipmentBox finalTalismanBox">
+            <div id="finalTalismanGroup" className="equipmentBox">
+              <div className="equipmentSeparator">
                 {selectedBuild.talisman1}
                 <img
                   src={talismanArray[0]}
                   alt="Talisman 1"
-                  className="finalTalismanImage"
+                  className="equipmentImage"
                 />
               </div>
-              <div className="equipmentBox finalTalismanBox">
+              <div className="equipmentSeparator">
                 {selectedBuild.talisman2}
                 <img
                   src={talismanArray[1]}
                   alt="Talisman 1"
-                  className="finalTalismanImage"
+                  className="equipmentImage"
                 />
               </div>
-              <div className="equipmentBox finalTalismanBox">
+              <div className="equipmentSeparator">
                 {selectedBuild.talisman3}
                 <img
                   src={talismanArray[2]}
                   alt="Talisman 1"
-                  className="finalTalismanImage"
+                  className="equipmentImage"
                 />
               </div>
-              <div className="equipmentBox finalTalismanBox">
+              <div className="equipmentSeparator">
                 {selectedBuild.talisman4}
                 <img
                   src={talismanArray[3]}
                   alt="Talisman 1"
-                  className="finalTalismanImage"
+                  className="equipmentImage"
                 />
               </div>
             </div>
@@ -299,27 +299,28 @@ function App() {
             <br />
 
             <div id="finalPhysickAndStatsGroup">
-              <div id="finalPhysickGroup">
-                <div className="equipmentBox" id="finalPhysickBox">
-                  {selectedBuild.physick1}
-                  <img
-                    src={tearArray[0]}
-                    alt="crystal tear 1"
-                    className="finalPhysickImage"
-                  />
-                </div>
-                <div className="equipmentBox" id="finalPhysickBox">
-                  {selectedBuild.physick2}
-                  <img
-                    src={tearArray[1]}
-                    alt="crystal tear 2"
-                    className="finalPhysickImage"
-                  />
-                </div>
+              <div id="finalPhysickGroup" className="equipmentBox">
+                  <div className="equipmentSeparator" id="finalPhysickBox">
+                    {selectedBuild.physick1}
+                    <img
+                      src={tearArray[0]}
+                      alt="crystal tear 1"
+                      className="equipmentImage"
+                    />
+                  </div>
+                  <div className="equipmentSeparator" id="finalPhysickBox">
+                    {selectedBuild.physick2}
+                    <img
+                      src={tearArray[1]}
+                      alt="crystal tear 2"
+                      className="equipmentImage"
+                    />
+                  </div>
               </div>
-              <div id="finalStatsGroup">
-                <h2>Stats</h2>
 
+              
+              <div id="finalStatsGroup" className="equipmentBox">
+                <h2>Stats</h2>
               </div>
             </div>
           </div>
