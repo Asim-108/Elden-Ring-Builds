@@ -27,7 +27,7 @@ export default function getTalisman(talisman: string | undefined) {
       return dragoncrestGreatShieldTalisman;
     case "Godfrey Icon":
       return godfreyIcon;
-    case "Graven Mass Talisman":
+    case "Graven-Mass Talisman":
       return gravenMassTalisman;
     case "Green Turtle Talisman":
       return greenTurtleTalisman;
