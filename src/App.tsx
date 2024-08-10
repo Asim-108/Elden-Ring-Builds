@@ -246,10 +246,10 @@ function App() {
             <hr className="line" style={{ margin: "25px" }} />
 
             {/* Display final chosen sword and armour in top row */}
-            <div id="finalSwordAndArmourGroup">
+            <div id="finalWeaponAndArmourGroup">
               <div
-                className="equipmentBox equipmentSeparator"
-                id="finalWeaponBox"
+                className="finalEquipmentContainer equipmentSeparator"
+                id="finalWeaponContainer"
               >
                 {selectedBuild.weapon}
                 <img
@@ -259,25 +259,31 @@ function App() {
                 />
               </div>
               <div
-                className="equipmentBox equipmentSeparator"
-                id="finalArmourBox"
+                className="finalEquipmentContainer equipmentSeparator"
+                id="finalArmourContainer"
               >
                 {selectedBuild.armour}
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
                   <img
                     src={armourArray[0]}
                     alt="Armour Headgear"
-                    className="equipmentImage"
+                    className="equipmentImage armourImage"
                   />
                   <img
                     src={armourArray[1]}
                     alt="Armour Chest"
-                    className="equipmentImage"
+                    className="equipmentImage armourImage"
                   />
                   <img
                     src={armourArray[2]}
                     alt="Armour Legs"
-                    className="equipmentImage"
+                    className="equipmentImage armourImage"
                   />
                 </div>
               </div>
@@ -287,9 +293,12 @@ function App() {
 
             {/* Display final talismans for build in second row */}
 
-            <div id="finalTalismanGroup" className="equipmentBox">
+            <div
+              id="finalTalismanContainer"
+              className="finalEquipmentContainer"
+            >
               <div className="equipmentSeparator">
-                {selectedBuild.talisman1}
+                <div>{selectedBuild.talisman1}</div>
                 <img
                   src={talismanArray[0]}
                   alt="Talisman 1"
@@ -327,9 +336,15 @@ function App() {
             {/* Display final crystal tears and stats for build in third row */}
 
             <div id="finalPhysickAndStatsGroup">
-              <div id="finalPhysickGroup" className="equipmentBox">
+              <div
+                id="finalPhysickContainer"
+                className="finalEquipmentContainer"
+              >
                 <div className="equipmentSeparator" id="finalPhysickBox">
-                  {selectedBuild.physick1}
+                  <div style={{ width: "25vh", textAlign: "center" }}>
+                    {selectedBuild.physick1}
+                  </div>
+
                   <img
                     src={physickArray[0]}
                     alt="crystal tear 1"
@@ -337,7 +352,9 @@ function App() {
                   />
                 </div>
                 <div className="equipmentSeparator" id="finalPhysickBox">
-                  {selectedBuild.physick2}
+                  <div style={{ width: "25vh", textAlign: "center" }}>
+                    {selectedBuild.physick2}
+                  </div>
                   <img
                     src={physickArray[1]}
                     alt="crystal tear 2"
@@ -347,31 +364,41 @@ function App() {
               </div>
 
               <div
-                id="finalStatsGroup"
-                className="equipmentBox"
-                style={{ flexDirection: "column" }}
+                id="finalStatsContainer"
+                className="finalEquipmentContainer"
+                style={{ flexDirection: "column", flex: "start" }}
               >
-                <h2>Stats</h2>
+                <h2 style={{ marginTop: "1vh" }}>Build Stats</h2>
                 <div id="finalBuildStats" style={{ display: "flex" }}>
-                  <div>
-                    <p>vigor: </p>
-                    {selectedBuild.vigor}
-                    <p>mind: </p>
-                    {selectedBuild.mind}
-                    <p>endurance: </p>
-                    {selectedBuild.endurance}
-                    <p>strength: </p>
-                    {selectedBuild.strength}
+                  <div style={{ display: "flex" }} className="statColumn">
+                    <div style={{ marginRight: "2vh" }}>
+                      <p>Vigor: </p>
+                      <p>Mind: </p>
+                      <p>Endurance: </p>
+                      <p>Strength: </p>
+                    </div>
+
+                    <div>
+                      <p>{selectedBuild.vigor}</p>
+                      <p>{selectedBuild.mind}</p>
+                      <p>{selectedBuild.endurance}</p>
+                      <p>{selectedBuild.strength}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>dexterity: </p>
-                    {selectedBuild.dexterity}
-                    <p>intelligence: </p>
-                    {selectedBuild.intelligence}
-                    <p>faith: </p>
-                    {selectedBuild.faith}
-                    <p>arcane: </p>
-                    {selectedBuild.arcane}
+
+                  <div style={{ display: "flex" }}>
+                    <div style={{ marginRight: "2vh" }}>
+                      <p>Dexterity: </p>
+                      <p>Intelligence: </p>
+                      <p>Faith: </p>
+                      <p>Arcane: </p>
+                    </div>
+                    <div>
+                      <p>{selectedBuild.dexterity}</p>
+                      <p>{selectedBuild.intelligence}</p>
+                      <p>{selectedBuild.faith}</p>
+                      <p>{selectedBuild.arcane}</p>
+                    </div>
                   </div>
                 </div>
               </div>
