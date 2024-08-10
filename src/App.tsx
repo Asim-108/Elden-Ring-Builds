@@ -9,24 +9,31 @@ import getTalisman from "./talismans";
 import getPhysick from "./physick";
 
 function App() {
+  // variable keeping track of the current main stat that the user has selected
   const [stat, setStat] = useState<undefined | string>(undefined);
 
+  //variable keeping track of the current weapon that the user has selected
   const [selectedBuild, setSelectedBuild] = useState<undefined | any>(
     undefined
   );
 
+  //array keeping track of builds that are valid based on the selected main stat
   const [validBuilds, setValidBuilds] = useState<undefined | any[]>(undefined);
 
+  //array keeping track of armour set for the build chosen
   const [armourArray, setArmourArray] = useState<any[]>([]);
 
+  // array keeping track of talisman set for the build chosen
   const [talismanArray, setTalismanArray] = useState<any[]>([]);
 
-  const [tearArray, setTearArray] = useState<any[]>([]);
+  // array keeping track of tear set for the build chosen
+  const [physickArray, setPhysickArray] = useState<any[]>([]);
 
   return (
     <body>
       {/* Navigation bar at the top of the website */}
       <div className="navBar">
+        {/* logo in top left of nav bar */}
         <div style={{ width: "75%" }}>
           <img
             className="logo"
@@ -35,6 +42,7 @@ function App() {
           />
         </div>
 
+        {/* navigation buttons */}
         <a href="#buildSelect" className="buttonMargins">
           <button className="compassButton">
             <Icons.CompassIcon />
@@ -68,20 +76,24 @@ function App() {
       {/* Choosing build Stat */}
 
       <div id="buildSelect" className="section">
-        <div style={{display: 'flex'}}>
+        <div style={{ display: "flex" }}>
           <div className="sectionIcon">
             <Icons.CompassIcon />
           </div>
-          
+
           <h1 className="sectionTitle">Choose Build</h1>
         </div>
 
-        <hr className="line" style={{margin: '25px'}} />
+        <hr className="line" style={{ margin: "25px" }} />
+
+        {/* main buttons for choosing build */}
+
+        {/* set the stat to what user selected, set validBuilds array to builds appropriate for that stat */}
 
         <div className="centredBuildButtons">
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setSelectedBuild(undefined);
                 setStat("str");
@@ -94,7 +106,7 @@ function App() {
 
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setSelectedBuild(undefined);
                 setStat("dex");
@@ -107,7 +119,7 @@ function App() {
 
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setSelectedBuild(undefined);
                 setStat("int");
@@ -117,13 +129,11 @@ function App() {
               Intelligence
             </button>
           </a>
-
         </div>
         <div className="centredBuildButtons">
-
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setSelectedBuild(undefined);
                 setStat("fai");
@@ -136,7 +146,7 @@ function App() {
 
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setSelectedBuild(undefined);
                 setStat("arc");
@@ -146,13 +156,11 @@ function App() {
               Arcane
             </button>
           </a>
-
         </div>
         <div className="centredBuildButtons">
-
           <a href="#weaponSelect" className="buttonMargins">
             <button
-              className="buildButton"
+              className="buildSelectButton"
               onClick={() => {
                 setStat("rand");
                 setValidBuilds(buildStructs("rand"));
@@ -172,17 +180,21 @@ function App() {
 
       {stat && (
         <div id="weaponSelect" className="section oddSection">
-          <div style={{display: 'flex'}}>
+          <div style={{ display: "flex" }}>
             <div className="sectionIcon">
               <Icons.WeaponIcon />
             </div>
             <h1 className="sectionTitle">Choose Weapon</h1>
           </div>
-          <hr className="line" style={{margin: '25px'}} />
+          <hr className="line" style={{ margin: "25px" }} />
           <div className="weapons">
+            {/* for validBuilds array, loop through using .map and label current item element for reference*/}
+
             {validBuilds?.map((element) => {
               return (
                 <a href="#finalBuild" className="buttonMargins clickable">
+                  {/* upon choosing weapon, set selected build to that and get armour, talismans and physick for them */}
+                  {/* use their respective useStates to set arrays for armourArray, talismanArray, and physickArray */}
                   <div
                     className="weaponElement clickable"
                     onClick={() => {
@@ -194,7 +206,7 @@ function App() {
                         getTalisman(element.talisman3),
                         getTalisman(element.talisman4),
                       ]);
-                      setTearArray([
+                      setPhysickArray([
                         getPhysick(element.physick1),
                         getPhysick(element.physick2),
                       ]);
@@ -202,7 +214,11 @@ function App() {
                   >
                     <p id="weaponName">{element?.weapon}</p>
                     <button className="weaponButton">
-                      <img src={element.weaponImg} alt="weapon" className="clickable"/>
+                      <img
+                        src={element.weaponImg}
+                        alt="weapon"
+                        className="clickable"
+                      />
                     </button>
                   </div>
                 </a>
@@ -221,15 +237,20 @@ function App() {
       {selectedBuild && (
         <>
           <div id="finalBuild" className="section">
-            <div style={{display: 'flex'}}>
+            <div style={{ display: "flex" }}>
               <div className="sectionIcon">
                 <Icons.ShieldIcon />
               </div>
               <h1 className="sectionTitle">Your Build</h1>
             </div>
-            <hr className="line" style={{margin: '25px'}} />
+            <hr className="line" style={{ margin: "25px" }} />
+
+            {/* Display final chosen sword and armour in top row */}
             <div id="finalSwordAndArmourGroup">
-              <div className="equipmentBox equipmentSeparator" id="finalWeaponBox">
+              <div
+                className="equipmentBox equipmentSeparator"
+                id="finalWeaponBox"
+              >
                 {selectedBuild.weapon}
                 <img
                   src={selectedBuild.weaponImg}
@@ -237,7 +258,10 @@ function App() {
                   className="equipmentImage"
                 />
               </div>
-              <div className="equipmentBox equipmentSeparator" id="finalArmourBox">
+              <div
+                className="equipmentBox equipmentSeparator"
+                id="finalArmourBox"
+              >
                 {selectedBuild.armour}
                 <div>
                   <img
@@ -260,6 +284,8 @@ function App() {
             </div>
 
             <br />
+
+            {/* Display final talismans for build in second row */}
 
             <div id="finalTalismanGroup" className="equipmentBox">
               <div className="equipmentSeparator">
@@ -298,29 +324,56 @@ function App() {
 
             <br />
 
+            {/* Display final crystal tears and stats for build in third row */}
+
             <div id="finalPhysickAndStatsGroup">
               <div id="finalPhysickGroup" className="equipmentBox">
-                  <div className="equipmentSeparator" id="finalPhysickBox">
-                    {selectedBuild.physick1}
-                    <img
-                      src={tearArray[0]}
-                      alt="crystal tear 1"
-                      className="equipmentImage"
-                    />
-                  </div>
-                  <div className="equipmentSeparator" id="finalPhysickBox">
-                    {selectedBuild.physick2}
-                    <img
-                      src={tearArray[1]}
-                      alt="crystal tear 2"
-                      className="equipmentImage"
-                    />
-                  </div>
+                <div className="equipmentSeparator" id="finalPhysickBox">
+                  {selectedBuild.physick1}
+                  <img
+                    src={physickArray[0]}
+                    alt="crystal tear 1"
+                    className="equipmentImage"
+                  />
+                </div>
+                <div className="equipmentSeparator" id="finalPhysickBox">
+                  {selectedBuild.physick2}
+                  <img
+                    src={physickArray[1]}
+                    alt="crystal tear 2"
+                    className="equipmentImage"
+                  />
+                </div>
               </div>
 
-              
-              <div id="finalStatsGroup" className="equipmentBox">
+              <div
+                id="finalStatsGroup"
+                className="equipmentBox"
+                style={{ flexDirection: "column" }}
+              >
                 <h2>Stats</h2>
+                <div id="finalBuildStats" style={{ display: "flex" }}>
+                  <div>
+                    <p>vigor: </p>
+                    {selectedBuild.vigor}
+                    <p>mind: </p>
+                    {selectedBuild.mind}
+                    <p>endurance: </p>
+                    {selectedBuild.endurance}
+                    <p>strength: </p>
+                    {selectedBuild.strength}
+                  </div>
+                  <div>
+                    <p>dexterity: </p>
+                    {selectedBuild.dexterity}
+                    <p>intelligence: </p>
+                    {selectedBuild.intelligence}
+                    <p>faith: </p>
+                    {selectedBuild.faith}
+                    <p>arcane: </p>
+                    {selectedBuild.arcane}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

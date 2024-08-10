@@ -179,7 +179,7 @@ body {
   justify-content: center;
 }
 
-.buildButton {
+.buildSelectButton {
   background: var(--graddark);
   color: var(--highlight);
   padding: 5vh;
@@ -193,7 +193,7 @@ body {
   cursor: pointer;
 }
 
-.buildButton:hover {
+.buildSelectButton:hover {
   background: var(--gradmid);
 }
 
@@ -218,7 +218,7 @@ body {
 }
 
 .section {
-  padding: 5%
+  padding: 5%;
 }
 
 .oddSection {
@@ -283,7 +283,7 @@ body {
   display: flex;
   justify-content: space-between;
   overflow: auto;
-  
+
   margin: 1vh;
   padding: 5vh;
   border-radius: 10px;
@@ -296,7 +296,7 @@ body {
   align-items: center;
 
   font-family: "Signika";
-  font-size: 2vh;
+  font-size: 2.5vh;
 }
 
 .equipmentImage {
@@ -314,4 +314,7 @@ body {
 
 #finalPhysickGroup {
   display: flex;
+}
+
+#finalBuildStats {
 }
