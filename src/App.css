@@ -333,16 +333,27 @@ margin-right: 6vh;
   flex: start;
   flex-direction: column;
   justify-content: flex-start;
-  width: 50%
+  width: 50%;
+}
+
+.finalStatsText {
 }
 
 #finalBuildStats {
   font-family: Cormorant Garamond;
   font-weight: bold;
   font-size: 3.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
 }
 
 .statColumn {
   margin-left: 0;
   margin-right: 5vh;
+  border-left: 1px solid white;
+  padding-left: 20px;
+  display: flex;
 }

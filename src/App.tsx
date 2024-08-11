@@ -368,10 +368,15 @@ function App() {
                 className="finalEquipmentContainer"
                 style={{ flexDirection: "column", flex: "start" }}
               >
-                <h2 style={{ marginTop: "1vh" }}>Build Stats</h2>
-                <div id="finalBuildStats" style={{ display: "flex" }}>
-                  <div style={{ display: "flex" }} className="statColumn">
-                    <div style={{ marginRight: "2vh" }}>
+                <h2 style={{ marginTop: "1vh", textAlign: "center" }}>
+                  Build Stats
+                </h2>
+                <div id="finalBuildStats">
+                  <div style={{ marginLeft: "5%" }} className="statColumn">
+                    <div
+                      className="finalStatsText"
+                      style={{ marginRight: "5vh" }}
+                    >
                       <p>Vigor: </p>
                       <p>Mind: </p>
                       <p>Endurance: </p>
@@ -386,8 +391,13 @@ function App() {
                     </div>
                   </div>
 
-                  <div style={{ display: "flex" }}>
-                    <div style={{ marginRight: "2vh" }}>
+                  <div
+                    style={{
+                      paddingRight: "5%",
+                    }}
+                    className="statColumn"
+                  >
+                    <div style={{ marginRight: "5vh" }}>
                       <p>Dexterity: </p>
                       <p>Intelligence: </p>
                       <p>Faith: </p>
