@@ -386,7 +386,7 @@ function App() {
                 style={{ flexDirection: "column", flex: "start" }}
               >
                 <h2 style={{ marginTop: "1vh", textAlign: "center" }}>
-                  Build Stats
+                  Level 150 Build Stats
                 </h2>
                 <div id="finalBuildStats">
                   <div style={{ marginLeft: "5%" }} className="statColumn">
