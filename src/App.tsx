@@ -7,10 +7,21 @@ import * as Icons from "./assets/index";
 import getTalisman from "./talismans";
 import getPhysick from "./physick";
 
-import { useRef } from "react";
+import { useEffect } from "react";
 import React from "react";
 
 function App() {
+  useEffect(() => {
+    // disable automatic scroll restoration
+    window.history.scrollRestoration = "manual";
+
+    // Remove the hash from the URL, scroll to top of the page
+    if (window.location.hash) {
+      window.scrollTo(0, 0);
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
+
   // variable keeping track of the current main stat that the user has selected
   const [stat, setStat] = useState<undefined | string>(undefined);
 
