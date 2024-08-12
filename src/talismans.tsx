@@ -14,7 +14,11 @@ import erdtreesFavour from "./talismanAssets/Erdtree's Favor +2.png";
 import flocksCanvasTalisman from "./talismanAssets/Flock's Canvas Talisman.png";
 import roarMedalion from "./talismanAssets/Roar Medalion.png";
 import fireScorpionCharm from "./talismanAssets/Fire Scorpion Charm.png";
+import lightningScorpionCharm from "./talismanAssets/Lightning Scorpion Charm.png";
+import sacredScorpionCharm from "./talismanAssets/Sacred Scorpion Charm.png";
+import primalGlintstoneBlade from "./talismanAssets/Primal Glintstone Blade.png";
 
+// placeholder for unknown talismans, replace with actual image paths when available
 let placeholder = "/placeholder.png";
 
 export default function getTalisman(talisman: string | undefined) {
@@ -51,6 +55,12 @@ export default function getTalisman(talisman: string | undefined) {
       return roarMedalion;
     case "Fire Scorpion Charm":
       return fireScorpionCharm;
+    case "Lightning Scorpion Charm":
+      return lightningScorpionCharm;
+    case "Sacred Scorpion Charm":
+      return sacredScorpionCharm;
+    case "Primal Glintstone Blade":
+      return primalGlintstoneBlade;
     default:
       return placeholder;
   }

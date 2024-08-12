@@ -29,6 +29,10 @@ function App() {
   // array keeping track of tear set for the build chosen
   const [physickArray, setPhysickArray] = useState<any[]>([]);
 
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <body>
       {/* Navigation bar at the top of the website */}
@@ -410,6 +414,18 @@ function App() {
                       <p>{selectedBuild.arcane}</p>
                     </div>
                   </div>
+                </div>
+                <div
+                  style={{
+                    textAlign: "center",
+                    marginBottom: "0",
+                    paddingBottom: "0",
+                  }}
+                >
+                  <h2>Comments:</h2>
+                  <p style={{ marginBottom: "none", fontSize: "2vh" }}>
+                    {selectedBuild.comments}
+                  </p>
                 </div>
               </div>
             </div>
