@@ -179,6 +179,7 @@ function App() {
             <button
               className="buildSelectButton"
               onClick={() => {
+                setSelectedBuild(undefined);
                 setStat("rand");
                 setValidBuilds(buildStructs("rand"));
               }}
