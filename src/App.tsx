@@ -3,10 +3,12 @@ import "./App.css";
 import buildStructs from "./buildStructs";
 import getArmour from "./armourSets";
 import * as Icons from "./assets/index";
-import React from "react";
-import { getImageURL } from "./talismanAssets/image-util";
+// import { getImageURL } from "./talismanAssets/image-util";
 import getTalisman from "./talismans";
 import getPhysick from "./physick";
+
+import { useRef } from "react";
+import React from "react";
 
 function App() {
   // variable keeping track of the current main stat that the user has selected
