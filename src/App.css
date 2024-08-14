@@ -227,14 +227,16 @@ body {
 
 .weapons {
   background-color: var(--secondary);
-  width: 95%;
-  justify-content: center;
+  width: 85%;
+  justify-content: space-between;
   justify-self: center;
   display: flex;
   margin: auto;
   overflow: auto;
   border-radius: 10px;
   padding: 2vh;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 100px;
   border: 2vh solid var(--secondary);
 }
@@ -277,6 +279,10 @@ body {
   display: flex;
 }
 
+#finalWeaponContainer{
+  width: 25%;
+}
+
 .finalEquipmentContainer {
   background: linear-gradient(180deg, #001401 0%, #00373d 143.88%);
   color: white;
@@ -295,6 +301,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 
   font-family: "Signika";
   font-size: 3vh;
@@ -315,10 +322,9 @@ body {
   margin: 2vh;
 }
 
-/* .armourImage {
-margin-left: 6vh;
-margin-right: 6vh;
-} */
+.armourImage {
+
+}
 
 #finalPhysickAndStatsGroup {
   display: flex;

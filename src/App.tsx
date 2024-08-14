@@ -17,8 +17,8 @@ function App() {
 
     // Remove the hash from the URL, scroll to top of the page
     if (window.location.hash) {
-      window.scrollTo(0, 0);
       window.history.replaceState(null, "", window.location.pathname);
+      window.scrollTo(0, 0);
     }
   }, []);
 

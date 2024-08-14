@@ -1,3 +1,5 @@
+// large file for a trivial task, but with dynamic imports the code could potentially be a lot shorter
+
 import bullGoatsTalisman from "./talismanAssets/Bull-Goat's Talisman.png";
 import carianFinigreedCrest from "./talismanAssets/Carian Filigreed Crest.png";
 import dragoncrestGreatShieldTalisman from "./talismanAssets/Dragoncrest Greatshield Talisman.png";
