@@ -69,10 +69,27 @@ body {
 
 .navBar {
   background-color: var(--shadow);
-  padding: 10px;
+  max-height: 100px;
+  transition: max-height 0.5s;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.navBarScrolled {
+  background-color: var(--shadow);
+
+  /* SMOOTH TRANSITION HEIGHT TO 60PX */
+  max-height: 60px;
+  transition: max-height 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .clickable {
@@ -279,7 +296,7 @@ body {
   display: flex;
 }
 
-#finalWeaponContainer{
+#finalWeaponContainer {
   width: 25%;
 }
 
@@ -322,10 +339,6 @@ body {
   margin: 2vh;
 }
 
-.armourImage {
-
-}
-
 #finalPhysickAndStatsGroup {
   display: flex;
 }
@@ -340,9 +353,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 50%;
-}
-
-.finalStatsText {
 }
 
 #finalBuildStats {

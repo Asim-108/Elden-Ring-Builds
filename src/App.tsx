@@ -22,6 +22,20 @@ function App() {
     }
   }, []);
 
+  // variable keeping track of if user has scrolled down the page more than 900 pixels
+
+  const [fix, setFix] = useState(false);
+
+  function scrolledDown() {
+    if (window.scrollY >= 900) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrolledDown);
+
   // variable keeping track of the current main stat that the user has selected
   const [stat, setStat] = useState<undefined | string>(undefined);
 
@@ -49,13 +63,19 @@ function App() {
   return (
     <body>
       {/* Navigation bar at the top of the website */}
-      <div className="navBar">
+      <div className={fix ? "navBarScrolled" : "navBar"}>
         {/* logo in top left of nav bar */}
         <div style={{ width: "75%" }}>
           <img
-            className="logo"
+            className="logo clickable"
             src={require("./assets/elden-logo.png")}
             alt="elden logo"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              if (window.location.hash) {
+                window.history.replaceState(null, "", window.location.pathname);
+              }
+            }}
           />
         </div>
 
