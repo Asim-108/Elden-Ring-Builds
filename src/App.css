@@ -274,10 +274,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(250, 255, 123, 1) 0%,
     rgba(255, 86, 121, 1) 100%
+  ); */
+  background: radial-gradient(
+    circle,
+    rgba(0, 189, 107, 1) 0%,
+    rgba(0, 109, 185, 1) 100%
   );
   border-radius: 10px;
 }
@@ -285,8 +290,8 @@ body {
 .OPWeaponElement:hover {
   background: radial-gradient(
     circle,
-    rgba(248, 255, 44, 1) 0%,
-    rgba(255, 40, 84, 1) 100%
+    rgba(0, 217, 123, 1) 0%,
+    rgba(0, 126, 214, 1) 100%
   );
 }
 
