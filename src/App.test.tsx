@@ -26,8 +26,6 @@ test("Check if right weapons are being displayed for Dexterity", () => {
   expect(handOfMalenia).toBeInTheDocument();
   const uchigatana = screen.getByText(/Uchigatana/i);
   expect(uchigatana).toBeInTheDocument();
-  // incorrect weapon name to show test case failure
-  const boltOfGransax = screen.getByText(/Giant Crusher/i);
+  const boltOfGransax = screen.getByText(/Bolt of Gransax/i);
   expect(boltOfGransax).toBeInTheDocument();
 });
-

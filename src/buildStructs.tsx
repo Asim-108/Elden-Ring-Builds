@@ -18,6 +18,7 @@ const gutsSword = {
   faith: 10,
   arcane: 10,
   comments: "Use Lion's Claw ash of war with heavy affinity",
+  isOP: false
 };
 
 const giantCrusher = {
@@ -40,6 +41,7 @@ const giantCrusher = {
   faith: 10,
   arcane: 10,
   comments: "Use Lion's Claw ash of war with heavy affinity",
+  isOP: false
 };
 
 const maraisExecutionersSword = {
@@ -63,6 +65,7 @@ const maraisExecutionersSword = {
   arcane: 40,
   comments:
     "Swap Godfrey Icon with Bull-Goat's Talisman for extra poise during weapon skill",
+    isOP: false
 };
 
 const darkmoonGreatsword = {
@@ -86,6 +89,7 @@ const darkmoonGreatsword = {
   arcane: 10,
   comments:
     "OP BUILD. 25 Faith to use flame grant me strength and golden vow. Pair with Carian Regal Scepter for Ranni's Dark Moon and other sorceries",
+    isOP: true
 };
 
 const deathsPoker = {
@@ -109,6 +113,7 @@ const deathsPoker = {
   arcane: 10,
   comments:
     "OP BUILD. 25 Faith to use flame grant me strength and golden vow. Pair with Carian Regal Scepter for Ranni's Dark Moon and other sorceries",
+    isOP: true
 };
 
 const moonveil = {
@@ -132,6 +137,7 @@ const moonveil = {
   arcane: 10,
   comments:
     "Split Dexterity and Intelligence stats for dealing damage with Transient Moonlight wave, and up close",
+    isOP: false
 };
 
 const handOfMalenia = {
@@ -154,6 +160,7 @@ const handOfMalenia = {
   faith: 25,
   arcane: 10,
   comments: "25 Faith to use flame grant me strength and golden vow",
+  isOP: false
 };
 
 const uchigatana = {
@@ -177,6 +184,7 @@ const uchigatana = {
   arcane: 10,
   comments:
     "Pair with Seppuku ash of war with bleed affinity for extra bleed damage. Can swap out Land of Reeds Headgear with White Mask for extra bleed damage",
+    isOP: false
 };
 
 const boltOfGransax = {
@@ -200,6 +208,7 @@ const boltOfGransax = {
   arcane: 10,
   comments:
     "OP BUILD. 20 faith is because with Godrick's greatrune you can use golden vow and flame grant me strength",
+    isOP: true
 };
 
 const blasphemousBlade = {
@@ -223,6 +232,7 @@ const blasphemousBlade = {
   arcane: 10,
   comments:
     "OP BUILD. High Faith can use flame grant me strength and golden vow/howl of shabriri",
+    isOP: true
 };
 
 const sacredRelicSword = {
@@ -246,6 +256,7 @@ const sacredRelicSword = {
   arcane: 10,
   comments:
     "High Faith can use flame grant me strength and golden vow/howl of shabriri",
+    isOP: false
 };
 
 const godslayersGreatsword = {
@@ -269,6 +280,7 @@ const godslayersGreatsword = {
   arcane: 10,
   comments:
     "High Faith can use flame grant me strength and golden vow/howl of shabriri",
+    isOP: false
 };
 
 const riversOfBlood = {
@@ -291,6 +303,7 @@ const riversOfBlood = {
   faith: 15,
   arcane: 48,
   comments: "15 Faith to use flame grant me strength",
+  isOP: false
 };
 
 const dragonCommunion = {
@@ -314,6 +327,7 @@ const dragonCommunion = {
   arcane: 69,
   comments:
     "Pair with Ripple Blade for S scaling with arcane. 25 Faith to use flame grant me strength and golden vow",
+    isOP: false
 };
 
 const mohgwynsSacredSpear = {
@@ -337,6 +351,7 @@ const mohgwynsSacredSpear = {
   arcane: 60,
   comments:
     "OP BUILD. 25 Faith to use flame grant me strength and golden vow, can pair with dragon communion seal because of high arcane",
+    isOP: true
 };
 
 let buildsArray = [
@@ -365,7 +380,8 @@ export default function buildStructs(stat: string | undefined) {
       break;
     }
     case "str": {
-      validBuilds = [gutsSword, giantCrusher, maraisExecutionersSword];
+      // **HINT HINT**
+      validBuilds = [gutsSword, boltOfGransax, maraisExecutionersSword];
       break;
     }
     case "dex": {

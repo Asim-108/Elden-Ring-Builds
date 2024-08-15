@@ -234,7 +234,12 @@ function App() {
                   {/* upon choosing weapon, set selected build to that and get armour, talismans and physick for them */}
                   {/* use their respective useStates to set arrays for armourArray, talismanArray, and physickArray */}
                   <div
-                    className="weaponElement clickable"
+                  // have different CSS class if weapon is OP
+                    className={
+                      element.isOP
+                        ? "OPWeaponElement clickable"
+                        : "weaponElement clickable"
+                    }
                     onClick={() => {
                       setSelectedBuild(element);
                       setArmourArray(getArmour(element.armour));

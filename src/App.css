@@ -270,6 +270,26 @@ body {
   background: var(--gradmid);
 }
 
+.OPWeaponElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(250, 255, 123, 1) 0%,
+    rgba(255, 86, 121, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+.OPWeaponElement:hover {
+  background: radial-gradient(
+    circle,
+    rgba(248, 255, 44, 1) 0%,
+    rgba(255, 40, 84, 1) 100%
+  );
+}
+
 #weaponName {
   font-family: "Signika";
   color: white;
